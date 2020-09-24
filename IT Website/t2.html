@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>it.dbit</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-sanitize.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-route.js">
+	</script>
+
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<style>
+.dropbtn {
+  background-color: #393939;
+  color: white;
+  padding: 20px;
+  font-size: 14px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-size: 10px
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.dropbtn:hover {background-color:#3e8341;}
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+
+.container1 {
+    width: 18em;
+    height: 20em;
+    overflow: hidden;
+    background:#e6fff3;
+    position: relative;
+    font-weight:bold;
+    
+}
+
+.marquee {
+    top: 6em;
+    position: relative;
+    box-sizing: border-box;
+    animation: marquee 15s linear infinite;
+}
+
+.marquee:hover {
+    animation-play-state: paused;
+}
+
+/* Make it move! */
+@keyframes marquee {
+    0%   { top:   8em }
+    100% { top: -11em }
+}
+
+
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+}
+
+</style>
+
+
+<body style="padding-left: 50px;padding-right:50px; background-color:#9b9b9b;" ng-app="myAngularApp">
+
+
+
+
+	<nav class="navbar navbar-expand-md" style="margin-bottom: 0px">
+  <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="main-navigation">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="http://www.dbit.in">DBIT Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://parent.dbit.in/">Parent Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://alumni.dbit.in">Alumni</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://moodle.dbit.in">Moodle</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://dbcldrive.dbit.in">DBCL Drive</a>
+      </li>
+    </ul>
+</div>
+</nav>
+
+
+<div class="banner">
+  </div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+<nav class="navbar navbar-expand-md" style="margin-top:15px ;margin-bottom:15px; background-color: #393939">
+  <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="main-navigation">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <button class="dropbtn" class="nav-link" onclick="window.location.reload()">HOME</button>
+      </li>
+      <li class="nav-item">
+        <button class="dropbtn" class="nav-link" onclick="window.location.href='about.html';">ABOUT US</button>
+      </li>
+      
+      <li>
+        <div class="dropdown">
+  <button class="dropbtn">ACADEMICS</button>
+  <div class="dropdown-content">
+    <a href="AC.html">Academic Calender</a>
+    <a href="timetable.html">Timetable</a>
+  
+ <a href="">Syllabus</a>
+
+    <a href="http://dbitlrc.dbit.in">Library</a>
+    <a href="#">Corporate Advisory Board</a>
+    <a href="COE.html">Centre Of Excellence</a>
+  </div>
+</div>
+</li>
+<li>
+        <div class="dropdown">
+  <button class="dropbtn">FACULTY</button>
+  <div class="dropdown-content">
+    <a href="FP.html">Faculty Profile</a>
+    <a href="Recognition.html">Recognition</a>
+    <a href="Research.html">Research</a>
+  </div>
+</div>
+</li>
+<li>
+        <div class="dropdown">
+  <button class="dropbtn">STUDENTS</button>
+  <div class="dropdown-content">
+    <a href="recog.html">Recognition</a>
+    <a href="ugp.html">Undergraduate Project</a>
+  </div>
+</div>
+</li>
+<li>
+        <div class="dropdown">
+  <button class="dropbtn">EXAMINATIONS</button>
+  <div class="dropdown-content">
+    <a href="#">Notice</a>
+    <a href="#">Timetable</a>
+    <a href="#">Rank Holders</a>
+  </div>
+</div>
+</li>
+<li>
+        <div class="dropdown">
+  <button class="dropbtn">CO-CURRICULAR ACTIVITIES</button>
+  <div class="dropdown-content">
+    <a href="newsletter.html">Newsletter</a>
+    <a href="#">Association</a>
+    <a href="#">Certification Program</a>
+     <a href="#">Training/Workshop</a>
+      <a href="INDVIS.html">Industrial Visit</a>
+       <a href="#">Events</a>
+  </div>
+</div>
+</li>
+<li>
+        <div class="dropdown">
+  <button class="dropbtn">PLACEMENT & INTERNSHIP</button>
+  <div class="dropdown-content">
+    <a href="internship.html">Internship Record</a>
+    <a href="place.html">Placement Record</a>
+  </div>
+</div>
+</li>
+    </ul>
+</div>
+</nav>
+
+   <div class="row">
+    <div class="col-md-3" style="background-color:#d8d5d2;margin-left: 15px;">
+
+<center><h1 style="margin-top:20px"> CSI ACTIVITIES</h1></center>
+
+      <div id="myCarousel1" class="carousel slide" data-ride="carousel" style="margin-top:30px">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="ai1.jpg" alt="Los Angeles">
+    </div>
+
+    <div class="item">
+      <img src="ai2.jpg" alt="Chicago">
+    </div>
+
+<div class="item">
+      <img src="ai3.jpg" alt="Chicago">
+    </div>
+    
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel1" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel1" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+      <center>
+      <img src="hod.jfif" width="60%" style= "margin-top:100px"><br>
+    </center>
+          <center><h4><p style="font-weight: bold;font-size: 20px;"><a href="FP.html" style=" color: black;">Mr. Prasad Padalkar</a></p>
+          <p style="font-weight: bold;font-size: 19px;">Head of Department</p>
+          <p style="font-weight: bold;font-size: 17px;">Department of Information Technology</p>
+          <p>prasad.dbit[at]dbclmumbai.org</p>
+          <p>022-25042424 / 25040508</p>
+          <p>(Ext : 140)</p></center></h4>
+    </div>
+
+      <div class="col-md-5" style="background-color:#d8d5d2;margin-left: 34px;padding-left: 0px; padding-right:7px;">
+  <center>
+<div class="container" style="width:550px;">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="ai1.jpg" alt="Los Angeles" style="width:100%;">
+      </div>
+
+
+    
+      <div class="item">
+        <img src="ai2.jpg" alt="New york" style="width:100%;">
+      </div>
+    
+
+    <div class="item">
+      <img src="ai3.jpg" alt="Chicago">
+    </div>
+
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+
+</div>
+  <br>
+  <h3>HOD’s Message</h3>
+
+<p>The ever-changing technology not only impacts the business strategies, product manufacturing, service deliveries but also affects the job roles, expected skills and competencies expected while hiring.Information Technology is rapidly expanding itself to become the ubiquitous branch of engineering and has no domain untouched with the developments in IT. Thus IT engineers are required in all the sectors from coding to large scale Industrial Automation.</p>
+
+<p>Industry 4.0 would require knowledge of many different subject areas to work with close interaction with each other. Few of those being Big Data, Cyber Security, Simulation & Modeling, Additive Manufacturing, Cloud Computing, IoT, Augmented reality, Autonomous System & Robotics and System Integration. With the shifting paradigms of IT, we at IT department of Don Bosco Institute of Technology have set goals to develop and prepare our students with the knowledge & skills required for Industry 4.0. These skills set can be achieved by the students through the university curriculum and by participating in co-curricular activities like coding competitions, special interest clubs, Student Chapters of Professional bodies and many more activities which are arranged by the enthusiastic faculty members and students.</p>
+
+<p>Welcome to DBIT - IT and explore the future.</p>
+
+<p>Mr. Prasad Padalkar</p>
+<p>Head Of Department</p>
+</div>
+</div>
+</center>
+      
+
+      <div class="col-md-3" style="background-color:#d8d5d2;margin-left: 45px;">
+
+
+
+<center>
+  <h1>FLAGSHIP EVENTS</h1>
+<div class="container" style="width:390px;  margin-top: 45px; padding-right: 70px;">
+
+
+  <div id="myCarousel2" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="ai1.jpg" alt="Los Angeles" style="width:100%;">
+      </div>
+
+      
+      <div class="item">
+        <img src="ai2.jpg" alt="New york" style="width:100%;">
+      </div>
+
+<div class="item">
+      <img src="ai3.jpg" alt="Chicago">
+    </div>
+
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel2" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel2" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+
+</div>
+</div>
+</center>
+
+<center>
+<h1 style="margin-top:90px">NEWS AND EVENTS</h1>
+
+
+<div class="container1" style="padding-top:40px; margin-bottom:20">
+    <p class="marquee">IA timetable released <br> <br><br> Mumbai Hackathon is back <br><br><br> Game Of Codes Ended</p>
+</div>       
+</center>
+    </div>
+
+
+
+</div>
+
+
+</body>
+<footer class="page-footer" style="margin-top:50px;margin-bottom:5px">
+  <div class="container">
+    <div class="footer-copyright text-center" style="padding:10px;font-size:15px;font-weight:bold">© 2020 Copyright: Don Bosco Institute Of Technology</div>
+</footer>
+
+
+
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Centre of Excellence</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-sanitize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-route.js">
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<style>
+.dropbtn {
+  background-color: #393939;
+  color: white;
+  padding: 20px;
+  font-size: 14
+  px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-size: 10px
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.dropbtn:hover {background-color:#3e8341;}
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+</style>
+
+
+<body style="padding-left: 50px;padding-right:50px; background-color:#7c8981;" ng-app="myAngularApp">
+
+
+
+
+  <nav class="navbar navbar-expand-md" style="margin-bottom: 0px">
+  <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="main-navigation">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="http://www.dbit.in">DBIT Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://parent.dbit.in/">Parent Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://alumni.dbit.in">Alumni</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://moodle.dbit.in">Moodle</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://dbcldrive.dbit.in">DBCL Drive</a>
+      </li>
+    </ul>
+</div>
+</nav>
+
+
+<div class="banner">
+  </div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+<nav class="navbar navbar-expand-md" style="margin-top:15px ;margin-bottom:15px; background-color: #393939">
+  <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="main-navigation">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <button class="dropbtn" class="nav-link" onclick="window.location.href='t2.html';">HOME</button>
+      </li>
+      <li class="nav-item">
+        <button class="dropbtn" class="nav-link" href="#">ABOUT US</button>
+      </li>
+      
+      <li>
+        <div class="dropdown">
+  <button class="dropbtn">ACADEMICS</button>
+  <div class="dropdown-content">
+    <a href="#">Academic Calender</a>
+    <a href="#">Timetable</a>
+    <a href="#">Syllabus</a>
+    <a href="http://dbitlrc.dbit.in">Library</a>
+    <a href="#">Corporate Advisory Board</a>
+    <a href="#">Centre Of Excellence</a>
+  </div>
+</div>
+</li>
+<li>
+        <div class="dropdown">
+  <button class="dropbtn">FACULTY</button>
+  <div class="dropdown-content">
+    <a href="#">Faculty Profile</a>
+    <a href="#">Recognition</a>
+    <a href="#">Research</a>
+  </div>
+</div>
+</li>
+<li>
+        <div class="dropdown">
+  <button class="dropbtn">STUDENTS</button>
+  <div class="dropdown-content">
+    <a href="#">Recognition</a>
+    <a href="#">Undergraduate Project</a>
+  </div>
+</div>
+</li>
+<li>
+        <div class="dropdown">
+  <button class="dropbtn">EXAMINATIONS</button>
+  <div class="dropdown-content">
+    <a href="#">Notice</a>
+    <a href="#">Timetable</a>
+    <a href="#">Rank Holders</a>
+  </div>
+</div>
+</li>
+<li>
+        <div class="dropdown">
+  <button class="dropbtn">CO-CURRICULAR ACTIVITIES</button>
+  <div class="dropdown-content">
+    <a href="#">Newsletter</a>
+    <a href="#">Association</a>
+    <a href="#">Certification Program</a>
+     <a href="#">Training/Workshop</a>
+      <a href="#">Industrial Visit</a>
+       <a href="#">Events</a>
+  </div>
+</div>
+</li>
+<li>
+        <div class="dropdown">
+  <button class="dropbtn">PLACEMENT & INTERNSHIP</button>
+  <div class="dropdown-content">
+    <a href="#">Internship Record</a>
+    <a href="#">Placement Record</a>
+  </div>
+</div>
+</li>
+    </ul>
+</div>
+</nav>
+</div>
+    
+<div><b><h2 align="center">Centre of Excellence</h2></div>
+<div><h3 align="center">OpenSource Technologies</h3></div></b>
+
+
+  <h4><b>Introduction:</h4></b>
+  <p>A department within an organization is known for the strength of its staff members, the quality work they do show their expertise and team work, the milestone they achieve over a period of time, the followers they make within the organizations so on.. In academic emvironment, each department should strive for and should have some unique identity which is well appreciated and recognized by the people within the organization as well as outsiders. The idea of “Centre of Excellence” gives branding to a particular institute or department. The COE is a medium to exhibit or showcase the strength or expertise in one or more area of interest or something which fetches you recognition & revenue. An opprotunity well recognized indentity by the outsiders.</p></div><br>
+
+
+  <h4><b>Objective:</h4></b>
+  <p>The objectives behind setting up a COE in IT department are as follows:</p>
+  <ul>
+  <li>Shifting the focus from proprietery software to open source software used in executing various academic activities.</li>
+  <li>To achieving expertise & providing services in OSS domain.</li>
+  <li>To develop faculty & student community who will contrribute towards further development of OSS.</li>
+  <li>To indetify the scope to carry out research oriented project</li></ul></div><br>
+ 
+
+  <h4><b>Motivation:</h4></b>
+  As a policy, DBIT has always been a strong supporter of open source software and kept emphaziziing on use of OSS for conducting practical and implementing projects. The only challenge was , the lack of awareness among the staff members about the availability of various useful OSS tools/softwares. The IT department has been contributing in one or the other way towards the overall growth of the institute as far as use of the technology is concerned e.g. Moodle Administration, Moodle Training, Software development etc. As a mission of the institute & IT department, we plan to take it to the next level and create an identity for ourselves among various technical institutions and in turn within OSS community.
+</div><br><br>
+
+
+  <h4><b>Mission:</h4></b>
+  Mastering all OSS tools/softwares falling under identified streams
+  To be able to contribute towards the OSS community by promoting , developing and customizing OSS tools/softwares.
+  To develop a culture wherein everyone wants to know more & explore OSS
+  To associate with universities/institutes/industry who are into OSS development & its application.
+  To be known as OSS experts in terms of training, R&D projects, consultancy, software etc
+</div><br><br>
+
+
+  <h4><b>Beneficiaries/Stakeholder:</h4></b>
+  <h5>Mainly there are four beneficiaries:</h5>
+
+    <b>Student:</b>
+    Studens will be involved in COE activites as a developer keeping in mind the long term goals.
+    COE members will be responsible for making students aware of the benefits of OSS compared with proprietory softwares (Cost & Licensing issues).
+    Tag Line : Learn , Master , Share and Contribute towards OSS.<div></div>
+
+    <b>Faculty:</b>
+    COE will give an oportunity to explore beyond the subject syllabus so that one can contribute towards the growth of the department.
+    Practical exposure to various OSS will definetly boost the confidence.
+    Project implementation through open source plateform one of the key factors.
+    Sense of serving in a different way apart from teaching.<div></div>
+
+    <b>Department:</b>
+    Gradually department will be known for its expertise , services and quality projects thus creating an unique identity within and outside the campus.<div></div>
+
+    <b>Organization:</b>
+    Outside the campus, all the initiatives taken under COE will be refered as the initiatives taken by DBIT to promote & contribute towards OSS community.<br><div></div><br>
+
+
+  <h4><b>Activities:</h4></b>
+  <li>Short term goals allottment to the COE members.</li>
+  <li>Role (Admin, Trainer , Developer, consultant etc..)based training on some specific OSS/tools.</li>
+  <li>Mastering OSS/tools used in IT & Comps engineering stream</li>
+  <li>Feeture specific comparartive study of properietery software/tool and OSS/tools</li>
+  <li>Establishment of OSS Club (Faculty & Students).</li>
+  <li>Survey of other institutions/colleges/schools to identify possible requirements/services</li>
+  <li>Projecting ourselves as a service providers</li></div><br>
+ 
+
+  <h4><b>COE Members:</h4></b>
+  The list of members handling core functionalities is as follows.
+<ul>
+<li>Mr. Shiv Negi</li>
+<li>Mr. Guna Shekhar</li>
+<li>Mr. Prasad Padalkar</li>
+<li>Mr. Tayyabali Sayed</li>
+<li>Mr. Sushree Satapathy</li></ul></div><br>
+
+
+<h4><b>Action Plan for 2 years:</h4></b>
+The list of members handling core functionalities is as follows.
+<ul>
+<li>Bringing all COE members at same level of understanding about the objective of COE and related activities.</li>
+<li>Identifying all OSS useful in IT & Comps engineering stream.</li>
+<li>Carrying out a features based comparative study between proprietery software and OSS.r</li>
+<li>Mastering all software/tools to be able to provide training as a service</li>
+<li>Identifying research related open source projects</li>
+<li>Making students team ready for the development activities within COE</li></ul></div><br>
+ 
+
+<h4><b>Sustainability:</b></h4>
+The COE is based on open sourse software training , development, consultancy , and last but not the least contribution in further development of already developed tools/softwares. today the industry is gradually moving towards OSS to reduce the licensing cost and other issues involved in software lencesing. Therefore on one can doubt that OSS is going to dominate the IT sector in coming years.
+</div><br>
+
+
+
+</body>
+<footer class="page-footer" style="margin-top:50px;margin-bottom:5px">
+  <div class="container">
+    <div class="footer-copyright text-center" style="padding:10px;font-size:15px;font-weight:bold">© 2020 Copyright: Don Bosco Institute Of Technology</div>
+</footer>
+
+</html>

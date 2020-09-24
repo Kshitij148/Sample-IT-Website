@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Faculty Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-sanitize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-route.js">
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<style>
+.dropbtn {
+  background-color: #393939;
+  color: white;
+  padding: 20px;
+  font-size: 14
+  px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-size: 10px
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.dropbtn:hover {background-color:#3e8341;}
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+</style>
+
+
+<body style="padding-left: 50px;padding-right:50px; background-color:#9b9b9b;" ng-app="myAngularApp">
+
+
+  <nav class="navbar navbar-expand-md" style="margin-bottom: 0px">
+  <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="main-navigation">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="http://www.dbit.in">DBIT Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://parent.dbit.in/">Parent Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://alumni.dbit.in">Alumni</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://moodle.dbit.in">Moodle</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://dbcldrive.dbit.in">DBCL Drive</a>
+      </li>
+
+    </ul>
+</div>
+</nav>
+
+
+<div class="banner">
+  </div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+<nav class="navbar navbar-expand-md" style="margin-top:15px ;margin-bottom:15px; background-color: #393939">
+  <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="main-navigation">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <button class="dropbtn" class="nav-link" onclick="window.location.href='t2.html';">HOME</button>
+      </li>
+      <li class="nav-item">
+        <button class="dropbtn" class="nav-link" href="#">ABOUT US</button>
+      </li>
+      
+      <li>
+        <div class="dropdown">
+  <button class="dropbtn">ACADEMICS</button>
+  <div class="dropdown-content">
+    <a href="#">Academic Calender</a>
+    <a href="#">Timetable</a>
+    <a href="#">Syllabus</a>
+    <a href="#">Library</a>
+    <a href="#">Corporate Advisory Board</a>
+    <a href="#">Centre Of Excellence</a>
+  </div>
+</div>
+</li>
+<li>
+        <div class="dropdown">
+  <button class="dropbtn">FACULTY</button>
+  <div class="dropdown-content">
+    <a href="#">Faculty Profile</a>
+    <a href="#">Recognition</a>
+    <a href="#">Research</a>
+  </div>
+</div>
+</li>
+<li>
+        <div class="dropdown">
+  <button class="dropbtn">STUDENTS</button>
+  <div class="dropdown-content">
+    <a href="#">Recognition</a>
+    <a href="#">Undergraduate Project</a>
+  </div>
+</div>
+</li>
+<li>
+        <div class="dropdown">
+  <button class="dropbtn">EXAMINATIONS</button>
+  <div class="dropdown-content">
+    <a href="#">Notice</a>
+    <a href="#">Timetable</a>
+    <a href="#">Rank Holders</a>
+  </div>
+</div>
+</li>
+<li>
+        <div class="dropdown">
+  <button class="dropbtn">CO-CURRICULAR ACTIVITIES</button>
+  <div class="dropdown-content">
+    <a href="#">Newsletter</a>
+    <a href="#">Association</a>
+    <a href="#">Certification Program</a>
+     <a href="#">Training/Workshop</a>
+      <a href="#">Industrial Visit</a>
+       <a href="#">Events</a>
+  </div>
+</div>
+</li>
+<li>
+        <div class="dropdown">
+  <button class="dropbtn">PLACEMENT & INTERNSHIP</button>
+  <div class="dropdown-content">
+    <a href="#">Internship Record</a>
+    <a href="#">Placement Record</a>
+  </div>
+</div>
+</li>
+    </ul>
+</div>
+</nav>
+    </div>
+<div><br>
+<h2 align="center"><font color="black"><b>Faculty Profile</b></font></h2>
+</div><br><br>
+<style>  
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+#customers tr:nth-child(odd){background-color: #9e9e9e;}
+#customers tr:hover {background-color: #323232; color: white;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #f2f2f2;
+  color: black;
+}
+</style>
+</head>
+<body>
+
+<table id="customers">
+  <tr><b>
+    <th>Sr.No</th>
+    <th>Name</th>
+    <th>Designation</th>
+    <th>Area of Specialisation</th>
+    <th>Email-id/ Extension</th>
+    <th>Details</th>
+  </b></tr>
+  <tr>
+    <td>1</td>
+    <td>Mr. Prasad Padalkar</td>
+    <td>Head of Department</td>
+    <td>Networking<br>
+Software Engineering<br>
+Digital Logic</td>
+    <td>prasad.dbit[at]dbclmumbai.org<br>
+(#140)</td>
+    <td><a href="#">View</a></td>
+  </tr>
+
+  <tr>
+    <td>2</td>
+    <td>Ms. Anagha Shastri  </td>
+    <td>Assistant Professor</td>
+    <td>Programming & Algorithms<br>
+Project Management<br>
+Application Development<br>
+Image Processing & Web Mining</td>
+    <td>anagha.dbit[at]dbclmumbai.org<br>
+(#293)</td>
+    <td><a href="#">View</a></td>
+  </tr>
+
+  <tr>
+    <td>3</td>
+    <td>Mr. Shivsevak Negi</td>
+    <td>Assistant Professor</td>
+    <td>Database Management System<br>
+Web Programming/Application<br>
+Algorithm<br>
+Information Storage Management</td>
+    <td>shiv.dbit[at]dbclmumbai.org<br>
+(#)</td>
+    <td><a href="#">View</a></td>
+  </tr>
+
+  <tr>
+  <td>4</td>
+  <td>Ms. Vaishali Kavathekar</td>
+  <td>Assistant Professor</td>
+  <td>Image Processing<br>
+  Web Development & Security</td>
+  <td>vaishali.dbit[at]dbclmumbai.org<br>
+  (#376)</td>
+  <td><a href="#">View</a></td>
+  </tr>
+
+<tr>
+<td>5</td>
+<td>Ms. Janhavi Baikerikar</td>
+<td>Assistant Professor</td> 
+<td>Electronics</td>
+<td>janhavi.dbit[at]dbclmumbai.org<br>
+(#373)</td>  
+<td><a href="#">View</a></td></tr>
+
+<tr>
+<td>6</td>
+<td>Mr. Tayyabali Sayyad</td>
+<td>Assistant Professor</td>
+<td>Computer Network<br>
+Information and Network Security<br>
+Data Structure and Algorithms<br>
+Open Source Technology<br>
+Geographical Information System</td>
+<td>tayyabali.dbit[at]dbclmumbai.org<br>
+(#375)</td>
+<td><a href="#">View</a></td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>Mr. Nilesh Ghavate</td>
+<td>Assistant Professor</td>
+<td>Computer Network & Security<br>
+Web Devlopement<br>
+Geographical Information System</td>
+<td>nilesh.dbit[at]dbclmumbai.org<br>
+(#374)</td>
+<td><a href="#">View</a></td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>Ms. Sunantha Guruswamy</td>
+<td>Assistant Professor</td>
+<td>Data Mining<br>
+Distributed Systems data Alaytics<br>
+Machine Learning<br>
+Deep learning</td>
+<td>sunantha.dbit[at]dbclmumbai.org<br>
+(#145)</td>
+<td><a href="#">View</a></td>
+</tr>
+
+<tr>
+<td>9</td>
+<td>Ms. Sushree Satapathy</td>
+<td>Assistant Professor</td>
+<td>Software Testing<br>
+Information Theory & Coding<br>
+Data structure and analysis<br>
+Geographical Information System</td>
+<td>sushree.dbit[at]dbclmumbai.org<br>
+(#377)</td>
+<td><a href="#">View</a></td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>Ms. Aruna Khubalkar</td>
+<td>Assistant Professor</td>
+<td>Java Programming<br>
+Data structures and Algorithms<br>
+Information and network security<br>
+Database systems<br>
+Data warehousing and Mining</td>
+<td>aruna.dbit[at]dbclmumbai.org<br>
+(#145)</td>
+<td><a href="#">View</a></td>
+</tr>
+
+<tr>
+<td>11</td>
+<td>Mr. Uday Nayak</td>
+<td>Assistant Professor</td>
+<td>Machine Learning<br>
+Big Data Analytics<br>
+Data Mining & Business Intelligence<br>
+Security in Computing & Cryptography<br>
+Theory of Computation/Automata Theory<br></td>
+<td>uday.dbit[at]dbclmumbai.org<br>
+(#145)</td>
+<td><a href="#">View</a></td>
+</tr>
+
+<tr>
+<td>12</td>
+<td>Ms. Vijaya Bharathi</td>
+<td>Assistant Professor</td>
+<td>Software Engineering<br>
+Database Management System<br>
+Data Mining and Big Data Analytics<br></td>
+<td>vijaya.dbit@dbclmumbai.org<br>
+(#145)</td>
+<td><a href="#">View</a></td>
+</tr>
+
+</table>
+
+
+
+
+
+</body>
+<footer class="page-footer" style="margin-top:50px;margin-bottom:5px">
+  <div class="container">
+    <div class="footer-copyright text-center" style="padding:10px;font-size:15px;font-weight:bold">© 2020 Copyright: Don Bosco Institute Of Technology</div>
+</footer>
+
+
+</html>
